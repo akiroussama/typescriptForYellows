@@ -1,10 +1,6 @@
 "use strict";
-let showMsg = true;
-function showDetails(name, age, salary) {
-    let test = 10;
-    if (showMsg) {
-        return `Hello ${name}, Age Is ${age}`;
-    }
+function showData(name, age, country) {
+    return `${name} - ${age} - ${country}`;
 }
-console.log(showDetails("Francesco", 40, 5000));
+console.log(showData("Iris"));
 //# sourceMappingURL=index.js.map
