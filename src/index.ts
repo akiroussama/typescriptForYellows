@@ -1,20 +1,19 @@
 /*
-  Type Annotations With Arrays
+  Annotations de type avec des tableaux multidimensionnels
 */
 
-let all: string | number | boolean = "Baptiste";
+let arrayOne: number[] = [1, 2, 3, 4, 5];
+let arrayTwo: string[] = ["A", "B", "C"];
+let arrayThree: (string | number)[] = [1, 2, 3, 4, "A", "B", "C"];
 
-all = "A";
-all = 100;
-all = true;
-// all = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// Comment déduire le type d'un tableau ?
-let myFriends: string[] = ["Nathan", "Greg", "Ludivine"];
-
-//let myFriends = ["Nathan", "Greg", "Ludivine", 10];
-
-for (let i = 0; i < myFriends.length; i++) {
-  console.log(myFriends[i]);
-  //console.log(myFriends[i].repeat(3));
-}
+let arrayFour: (string | number | string[] | boolean)[] = [
+  1,
+  2,
+  3,
+  4,
+  "A",
+  "B",
+  ["C", "D"],
+  true,
+  false,
+];
