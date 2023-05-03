@@ -1,6 +1,6 @@
-let age = 20;
-if (age > 10) {
-  console.log("Hello");
-} else {
-  console.log(age.repeat(10));
+function add(n1, n2) {
+  return n1 + n2;
 }
+
+console.log(add(10, "20"));
+console.log(typeof add(10, "20"));
