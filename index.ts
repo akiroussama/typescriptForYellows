@@ -1,1 +1,1 @@
-console.log(math.floor(2.3));
+console.log(Math.floor(2.3));
