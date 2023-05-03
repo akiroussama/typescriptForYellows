@@ -1,16 +1,10 @@
 "use strict";
-let arrayOne = [1, 2, 3, 4, 5];
-let arrayTwo = ["A", "B", "C"];
-let arrayThree = [1, 2, 3, 4, "A", "B", "C"];
-let arrayFour = [
-    1,
-    2,
-    3,
-    4,
-    "A",
-    "B",
-    ["C", "D"],
-    true,
-    false,
-];
+let showMsg = true;
+function showDetails(name, age, salary) {
+    let test = 10;
+    if (showMsg) {
+        return `Hello ${name}, Age Is ${age}`;
+    }
+}
+console.log(showDetails("Francesco", 40, 5000));
 //# sourceMappingURL=index.js.map

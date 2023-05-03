@@ -1,19 +1,25 @@
 /*
-  Annotations de type avec des tableaux multidimensionnels
+  Type Annotations With Functions
+
+  - noImplicitAny
+
+  - noImplicitReturns
+  --- Vérifie tous les chemins de code dans une fonction pour s'assurer qu'ils renvoient une valeur
+
+  - noUnusedLocals
+ --- Signaler les erreurs sur les variables locales inutilisées
+
+  - noUnusedParameters
+   --- Signaler les erreurs sur les paramètres inutilisés dans les fonctions.
 */
 
-let arrayOne: number[] = [1, 2, 3, 4, 5];
-let arrayTwo: string[] = ["A", "B", "C"];
-let arrayThree: (string | number)[] = [1, 2, 3, 4, "A", "B", "C"];
+let showMsg = true;
 
-let arrayFour: (string | number | string[] | boolean)[] = [
-  1,
-  2,
-  3,
-  4,
-  "A",
-  "B",
-  ["C", "D"],
-  true,
-  false,
-];
+function showDetails(name, age, salary) {
+  let test = 10;
+  if (showMsg) {
+    return `Hello ${name}, Age Is ${age}`;
+  }
+}
+
+console.log(showDetails("Francesco", 40, 5000));
