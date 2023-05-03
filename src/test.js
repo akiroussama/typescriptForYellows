@@ -1,4 +1,4 @@
-let age = 10;
+let age = 20;
 if (age > 10) {
   console.log("Hello");
 } else {
