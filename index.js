@@ -1,1 +1,1 @@
-console.log("our first typescript code!");
+console.log(math.floor(2.3));
