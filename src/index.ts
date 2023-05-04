@@ -46,3 +46,6 @@ function logging(msg: string) {
 // variable de type never
 // let a: never = 10;
 // --- Les variables ne peuvent pas avoir un type de retour "Never"
+
+// 5eme partie
+// allowUnreachableCode : false
