@@ -1,4 +1,13 @@
 "use strict";
-/* this is a comment */
-console.log(Math.floor(2.3));
+const fail = (msg) => {
+    throw new Error(msg);
+};
+fail("Iam A Message");
+function alwaysLog(name) {
+    while (true) {
+        console.log(name);
+    }
+}
+alwaysLog("Yellowz");
+console.log("Test");
 //# sourceMappingURL=index.js.map
