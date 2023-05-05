@@ -17,10 +17,10 @@ let user: User = {
   username: "Ludivine",
   country: "Inde",
   sayHello() {
-    return `Hello ${this.username}`;
+    return `Salut ${this.username}`;
   },
   sayWelcome: () => {
-    return `Welcome ${user.username}`;
+    return `Coucou ${user.username}`;
   },
   getDouble(n) {
     return n * 2;
