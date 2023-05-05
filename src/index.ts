@@ -25,3 +25,12 @@ interface Settings {
 }
 
 let userSettings: Settings = {};
+
+// essaye maintenant avec type alias
+// type Settings = { ...
+// et tu verras que ça ne marche pas
+// il faut que tu modifies le code de l'alias
+// pour rajouter la propriété
+// et ça ne marche pas si tu le fais dans un autre fichier
+// il faut que tu modifies le code de l'alias
+// dans le même fichier
