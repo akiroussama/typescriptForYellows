@@ -1,27 +1,67 @@
 /*
   Interface
-  - ReOpen The Interface, dans quel cas ?
+  - Extending Interfaces
 */
 
-// Homepage :
-interface Settings {
-  readonly theme: boolean;
-  font: string;
+// interface User {
+//   id: number;
+//   username: string;
+//   country: string;
+// }
+
+// // interface moderateur sans l'extends
+// interface Moderator {
+//   id: number;
+//   username: string;
+//   country: string;
+//   role: string | number;
+// }
+
+// let user: Moderator = {
+//   id: 100,
+//   username: "Augustin",
+//   country: "Pays-Bas",
+//   role: "Modérateur",
+// };
+
+// deuxième partie: interface moderateur avec l'extends
+// interface User {
+//   id: number;
+//   username: string;
+//   country: string;
+// }
+// interface Moderator extends User {
+//   role: string | number;
+// }
+
+// troisième partie: interface admin avec l'extends
+// interface Admin extends Moderator {
+//   protect?: boolean;
+// }
+
+// quatrième partie: interface admin avec l'extends et l'override
+interface User {
+  id: number;
+  username: string;
+  country: string;
+}
+interface Moderator {
+  id: number;
+  username: string;
+  country: string;
+  role: string | number;
+}
+interface Admin extends Moderator, User {
+  protect?: boolean;
+  role: string; // boolean
 }
 
-// après quelques temps, on décide de rajouter une propriété
-// à l'interface Settings
-// on peut le faire sans avoir à modifier le code de l'interface
-// on peut le faire dans un autre fichier
-// Articles Page
-interface Settings {
-  sidebar: boolean;
-}
+let user: Admin = {
+  id: 100,
+  username: "Marine",
+  country: "FR",
+  role: "Super Admin",
+  protect: true,
+};
 
-// Pareil pour une autre page
-// Contact Page
-interface Settings {
-  external: boolean;
-}
-
-let userSettings: Settings = {};
+console.log(user.id);
