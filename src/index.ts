@@ -1,33 +1,27 @@
 /*
   Interface
-  - Interface Méthode And Paramètres
+  - ReOpen The Interface, dans quel cas ?
 */
 
-interface User {
-  id: number;
-  username: string;
-  country: string;
-  sayHello(): string;
-  sayWelcome: () => string;
-  getDouble(num: number): number;
+// Homepage :
+interface Settings {
+  readonly theme: boolean;
+  font: string;
 }
 
-let user: User = {
-  id: 100,
-  username: "Ludivine",
-  country: "Inde",
-  sayHello() {
-    return `Salut ${this.username}`;
-  },
-  sayWelcome: () => {
-    return `Coucou ${user.username}`;
-  },
-  getDouble(n) {
-    return n * 2;
-  },
-};
+// après quelques temps, on décide de rajouter une propriété
+// à l'interface Settings
+// on peut le faire sans avoir à modifier le code de l'interface
+// on peut le faire dans un autre fichier
+// Articles Page
+interface Settings {
+  sidebar: boolean;
+}
 
-console.log(user.id);
-console.log(user.sayHello());
-console.log(user.sayWelcome());
-console.log(user.getDouble(100));
+// Pareil pour une autre page
+// Contact Page
+interface Settings {
+  external: boolean;
+}
+
+let userSettings: Settings = {};
